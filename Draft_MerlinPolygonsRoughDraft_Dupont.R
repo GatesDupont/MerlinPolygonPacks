@@ -11,7 +11,7 @@
 
 KML = "AmazonRainforest.kml"
 Layer = "AmazonRainforest" # Not sure? See ogrInfo(KML)
-APIkey = ""
+APIkey = "{{merlin-user-key}}"
 file = "Untitled layer"
 
 ##############################################################################
