@@ -101,12 +101,14 @@ for(i in unique(allData$speciesCode)){
 }
 mydata = data.frame(species, max.freq, avg.freq)
 
+# Turning off scientific notation for matrix
+options(scipen=999)
+
 # Cleaning filter-level frequencies of 100
 m = as.matrix(mydata)
-m[m == -Inf & is.na(m)] <- 0
+m[m == -Inf & is.na(m)] = 0
 output = as.data.frame(m)
 
 View(output)
-
 
 #write.csv(output, file = paste(csvOuput, ".csv", sep = ""))
