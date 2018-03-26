@@ -129,6 +129,7 @@ erdTax = erdTax0[order(erdTax0$SpeciesCode),]
 
 # Final output, ordered, with combined taxonomy
 output = cbind(erdTax, rawOutput)
+output$species = NULL # Dropping duplicate column originally used to check row alignment
 output = output[order(output$TaxonomicOrder),]
 
 View(output)
